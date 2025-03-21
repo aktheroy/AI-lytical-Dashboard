@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Analytics</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #sidebar { 
+            position: fixed;
+            right: -300px; /* Hidden by default */
+            width: 300px;
+            height: 100%;
+            background: #f4f4f4;
+            transition: right 0.3s;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        }
+        #sidebar.active { right: 0; }
+        #dashboard, #chatbot { padding: 20px; }
+        button { padding: 10px 20px; margin: 10px; }
+        .chat-container { display: none; }
+    </style>
+</head>
+<body>
+    <!-- Buttons -->
+    <button onclick="showDashboard()">Dashboard</button>
+    <button onclick="toggleChat()">Chatbot</button>
+
+    <!-- Dashboard Container -->
+    <div id="dashboard">
+        <h2>Analytics Dashboard</h2>
+        <div id="analytics-output"></div>
+    </div>
+
+    <!-- Chatbot Sidebar -->
+    <div id="sidebar">
+        <h3>Chatbot</h3>
+        <div id="chat-history"></div>
+        <input type="text" id="user-query" placeholder="Ask a question...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        // Show dashboard and fetch analytics
+        function showDashboard() {
+            fetch('/analytics', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('analytics-output').innerHTML = `
+                        <p>Revenue Trends: ${JSON.stringify(data.revenue)}</p>
+                        <p>Cancellation Rate: ${data.cancellation_rate}%</p>
+                        <!-- Add other analytics here -->
+                    `;
+                });
+        }
+
+        // Toggle chatbot sidebar
+        function toggleChat() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Send message to chatbot
+        function sendMessage() {
+            const query = document.getElementById('user-query').value;
+            fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: query })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const chatHistory = document.getElementById('chat-history');
+                chatHistory.innerHTML += `<div><strong>You:</strong> ${query}</div>`;
+                chatHistory.innerHTML += `<div><strong>Bot:</strong> ${data.answer}</div>`;
+                document.getElementById('user-query').value = '';
+            });
+        }
+    </script>
+</body>
+</html>
