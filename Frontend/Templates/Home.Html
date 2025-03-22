@@ -10,8 +10,10 @@
 </head>
 
 <body>
+    <!-- Container for Dashboard and Chatbot -->
+    <!-- Container for Dashboard and Chatbot -->
     <div class="container">
-        <!-- Dashboard Section (70%) -->
+        <!-- Left Column: Analytics Dashboard -->
         <div class="dashboard">
             <!-- Dashboard Header -->
             <div class="dashboard-header">
@@ -38,37 +40,80 @@
             </div>
 
             <!-- Dashboard Content -->
-            <div class="stats">
-                <div class="stat-card">
-                    <h3>Projects</h3>
-                    <p class="stat-value">15</p>
+            <div class="dashboard-content">
+                <!-- Row 1: Two Cards -->
+                <div class="row">
+                    <div class="col-70">
+                        <div class="card small-card card-color-1">
+                            <h3>Revenue Trends Over Time</h3>
+                            <canvas id="revenue-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-30">
+                        <div class="card small-card card-color-2">
+                            <h3>Cancellation Rate</h3>
+                            <button class="health-button" onclick="checkHealth()">Health</button>
+                            <canvas id="cancellation-chart"></canvas>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <h3>Commits</h3>
-                    <p class="stat-value">284</p>
+
+                <!-- Row 2: Three Cards -->
+                <div class="row">
+                    <div class="col-33">
+                        <div class="card small-card card-color-3">
+                            <h3>Top Countries</h3>
+                            <canvas id="geographical-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-33">
+                        <div class="card small-card card-color-4">
+                            <h3>Lead Time Distribution</h3>
+                            <canvas id="lead-time-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-33">
+                        <div class="card small-card card-color-5">
+                            <h3>Booking Status</h3>
+                            <canvas id="status-chart"></canvas>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Row 3: Three Cards -->
+                <div class="row">
+                    <div class="col-33">
+                        <div class="card small-card card-color-6">
+                            <h3>Average Daily Rate</h3>
+                            <canvas id="adr-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-33">
+                        <div class="card small-card card-color-7">
+                            <h3>Market Segments</h3>
+                            <canvas id="market-segment-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-33">
+                        <div class="card small-card card-color-8">
+                            <h3>Repeat Guests</h3>
+                            <canvas id="repeat-guests-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <button class="analyze-button" onclick="analyze()">Analyze</button>
             </div>
         </div>
 
-        <!-- Chat Bot Section -->
+        <!-- Right Column: Chatbot -->
         <div class="chat-bot">
             <div class="chat-header">
                 <h2>Support Bot</h2>
                 <span class="online-status">Online</span>
             </div>
-
             <div class="chat-messages">
-                <!-- Bot Message -->
-                <div class="message bot">
-                    <p>Hello! How can I help you today?</p>
-                </div>
-
-                <!-- User Message -->
-                <div class="message user">
-                    <p>I need help with my order</p>
-                </div>
+                <!-- Messages -->
             </div>
-
             <div class="chat-input">
                 <input type="text" placeholder="Type your message..." id="message-input" />
                 <button class="send-btn">
