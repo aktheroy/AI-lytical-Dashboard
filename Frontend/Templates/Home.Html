@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard & Chat Bot</title>
+    <link rel="stylesheet" href="../Static/css/Styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Dashboard Section (70%) -->
+        <div class="dashboard">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <div class="header-left">
+                    <h1>Developer Dashboard</h1>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="mailto:example@email.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div id="current-date"></div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Projects</h3>
+                    <p class="stat-value">15</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Commits</h3>
+                    <p class="stat-value">284</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Bot Section -->
+        <div class="chat-bot">
+            <div class="chat-header">
+                <h2>Support Bot</h2>
+                <span class="online-status">Online</span>
+            </div>
+
+            <div class="chat-messages">
+                <!-- Bot Message -->
+                <div class="message bot">
+                    <p>Hello! How can I help you today?</p>
+                </div>
+
+                <!-- User Message -->
+                <div class="message user">
+                    <p>I need help with my order</p>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="message-input" />
+                <button class="send-btn">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                    <span class="sr-only">Send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="../Static/js/Script.js"></script>
+</body>
+
+</html>
