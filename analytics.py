@@ -53,14 +53,14 @@ class DataAnalyzer:
         fig, ax = plt.subplots(figsize=(8, 3))
         self._configure_plot(fig, ax)
 
-        # Create vertical bar chart
+        # Creates vertical bar chart
         bars = ax.bar(
         country_counts.index,  # X-axis: Country codes
         country_counts.values,  # Y-axis: Booking counts
-        color=self.style['colors'][:5]  # Use first 5 colors from palette
+        color=self.style['colors'][:5]  # Uses first 5 colors from palette
     )
         
-        # Customize the chart
+        # Customise the chart
         ax.set_xlabel('Country', color=self.style['font_color'])
         ax.set_ylabel('Number of Bookings', color=self.style['font_color'])
 
@@ -77,18 +77,81 @@ class DataAnalyzer:
             fontsize=12
         )
             
-        # Remove unnecessary spines and legend
+        # Remove unnecessary spines
         ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.legend().remove()  # Remove legend
-        
+        ax.spines['right'].set_visible(False)        
         return fig, country_counts.index.tolist()
 
+    def generate_customer_segmentation(self):
+        # Gets customer segmentation data
+        segment_counts = self.df['customer_segment'].value_counts()
+    
+        # Creates figure and axis
+        fig, ax = plt.subplots(figsize=(4, 3))
+        self._configure_plot(fig, ax)  # Apply consistent styling
+        
+        
+        # Creates donut pie chart
+        wedges, texts, autotexts = ax.pie(
+            segment_counts,
+            labels=segment_counts.index,
+            colors=self.style['colors'][:len(segment_counts)],  # Uses colors from palette
+            autopct='%1.1f%%',  # Shows percentages
+            startangle=30,  # Starts from top
+            wedgeprops=dict(width=0.4),  # Creates donut hole
+            textprops={'color': self.style['font_color'], 'fontsize': 12}
+    )
+    
+        # Make percentage text white and bold
+        for autotext in autotexts:
+            autotext.set_color('white')
+            autotext.set_fontweight('bold')
+    
+        # Add center circle for donut effect
+        centre_circle = plt.Circle((0, 0), 0.3, fc='none')
+        ax.add_artist(centre_circle)
+    
+        # Remove unnecessary spines
+        ax.axis('equal')  # Ensure pie is circular
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+    
+        return fig, segment_counts.index.tolist()
+    
+    def generate_lead_time_distribution(self):
+         # Creates figure and axis
+        fig, ax = plt.subplots(figsize=(30, 6))
+        self._configure_plot(fig, ax)  # Apply consistent styling
+    
+        # Creates KDE plot
+        sns.kdeplot(
+            data=self.df,
+            x='lead_time',  
+            color=self.style['colors'][4],  # Use primary color
+            fill=True,  # Fill under the curve
+            alpha=0.5,  # Transparency
+            ax=ax
+    )
+    
+        # Customising the chart
+        ax.set_xlabel('Lead Time (Days)', color=self.style['font_color'])
+        ax.set_ylabel('Density', color=self.style['font_color'])
+    
+        # Removes unnecessary spines
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+    
+    
     def generate_analytics(self):
         return {
             'revenue_fig': self.generate_revenue_trend(),
             'gauge_fig': self.generate_cancellation_rate()[0],
             'country_fig': self.generate_geo_distribution()[0],
+            'customer_seg_fig': self.generate_customer_segmentation()[0],
+            'lead_time_fig': self.generate_lead_time_distribution(),  # New chart
             'cancellation_rate': self.generate_cancellation_rate()[1],
-            'countries': self.generate_geo_distribution()[1]
-        }
+            'countries': self.generate_geo_distribution()[1],
+            'segments': self.generate_customer_segmentation()[1]
+            }

@@ -80,6 +80,7 @@ body {
 .col-70 { width: 70%; }
 .col-30 { width: 30%; }
 .col-33 { width: calc(33.33% - 13.33px); }
+.col-66 { width: 66.66%;}
 
 /* Card Styling */
 .card {
@@ -95,7 +96,7 @@ body {
 }
 
 .small-card {
-  height: 248px;
+  height: 270px;
   display: flex;
   flex-direction: column;
 }
@@ -108,11 +109,22 @@ body {
 
 /* Chart Containers */
 #revenue-chart,
-#gauge-chart,
+#customer-seg-chart,
 #country-chart {
-  height: 220px;
+  height: 200px;
   object-fit: contain;
 }
+
+#gauge-chart {
+  height: 280px;
+  object-fit: contain;
+}
+#lead-time-chart {
+  height: 200px;
+  object-fit: contain;
+
+}
+
 
 /* Chatbot Styles */
 .chat-bot {
@@ -263,6 +275,20 @@ body {
   color: rgba(255, 255, 255, 0.9);
   margin-top: 5px;
   font-weight: 500;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 0.9em;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  border-radius: 3px;
 }
 
 /* Responsive Design */

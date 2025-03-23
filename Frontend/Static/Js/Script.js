@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeDate();
     initializeChat();
-    createCountryLegend();
 });
 
 function initializeDate() {
@@ -37,3 +36,4 @@ function initializeChat() {
     sendBtn.addEventListener('click', handleSendMessage);
     input.addEventListener('keypress', (e) => e.key === 'Enter' && handleSendMessage());
 }
+

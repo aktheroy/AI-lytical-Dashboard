@@ -19,8 +19,11 @@ def home():
                          revenue_plot=fig_to_base64(results['revenue_fig']),
                          gauge_plot=fig_to_base64(results['gauge_fig']),
                          country_plot=fig_to_base64(results['country_fig']),
+                         customer_seg_fig=fig_to_base64(results['customer_seg_fig']),
+                         lead_time_fig=fig_to_base64(results['lead_time_fig']),  # New chart
                          cancellation_rate=f"{results['cancellation_rate']:.1f}%",
-                         countries=results['countries'])
+                         countries=results['countries'],
+                         segments=results['segments'])
 
 if __name__ == '__main__':
     app.run(debug=True)

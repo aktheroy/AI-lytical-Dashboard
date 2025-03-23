@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../Static/Css/Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Left Column: Dashboard -->
@@ -68,8 +70,9 @@
                     </div>
                     <div class="col-33">
                         <div class="card small-card card-color-4">
-                            <h3>Lead Time Distribution</h3>
-                            <canvas id="lead-time-chart"></canvas>
+                            <h3>Customer Segmentation</h3>
+                            <img id="customer-seg-chart" src="data:image/png;base64,{{ customer_seg_fig }}"
+                                alt="Customer Segmentation">
                         </div>
                     </div>
                     <div class="col-33">
@@ -85,19 +88,15 @@
                     <div class="col-33">
                         <div class="card small-card card-color-6">
                             <h3>Geographical Distribution</h3>
-                            <img id="country-chart" src="data:image/png;base64,{{ country_plot }}" alt="Country Distribution">
+                            <img id="country-chart" src="data:image/png;base64,{{ country_plot }}"
+                                alt="Country Distribution">
                         </div>
                     </div>
-                    <div class="col-33">
+                    <div class="col-66">
                         <div class="card small-card card-color-7">
-                            <h3>Market Segments</h3>
-                            <canvas id="market-segment-chart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-33">
-                        <div class="card small-card card-color-8">
-                            <h3>Repeat Guests</h3>
-                            <canvas id="repeat-guests-chart"></canvas>
+                            <h3>Lead Time Distribution</h3>
+                            <img id="lead-time-chart" src="data:image/png;base64,{{ lead_time_fig }}"
+                                alt="Lead Time Distribution">
                         </div>
                     </div>
                 </div>
@@ -127,4 +126,5 @@
 
     <script src="../Static/Js/Script.js"></script>
 </body>
+
 </html>
