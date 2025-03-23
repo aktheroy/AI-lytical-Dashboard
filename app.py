@@ -20,10 +20,13 @@ def home():
                          gauge_plot=fig_to_base64(results['gauge_fig']),
                          country_plot=fig_to_base64(results['country_fig']),
                          customer_seg_fig=fig_to_base64(results['customer_seg_fig']),
-                         lead_time_fig=fig_to_base64(results['lead_time_fig']),  # New chart
+                         lead_time_fig=fig_to_base64(results['lead_time_fig']),
+                         room_meal_fig=fig_to_base64(results['room_meal_fig']),  # New chart
                          cancellation_rate=f"{results['cancellation_rate']:.1f}%",
                          countries=results['countries'],
-                         segments=results['segments'])
+                         segments=results['segments'],
+                         rooms=results['rooms'],  # Room labels
+                         meals=results['meals'])  # Meal labels
 
 if __name__ == '__main__':
     app.run(debug=True)
