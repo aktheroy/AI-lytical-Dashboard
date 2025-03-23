@@ -1,0 +1,1318 @@
+[
+  {
+    "text": "Total Bookings: 117399",
+    "metadata": {
+      "category": "total",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Cancellation Rate: 37.49",
+    "metadata": {
+      "category": "cancellation",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Lead Time Analysis Average Lead Time: 105.1",
+    "metadata": {
+      "category": "lead",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Lead Time Analysis Lead Time Cancellation Corr: 0.29",
+    "metadata": {
+      "category": "lead",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Lead Time Analysis Lead Time Groups 90+: 47726",
+    "metadata": {
+      "category": "lead",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Lead Time Analysis Lead Time Groups 31-90: 29295",
+    "metadata": {
+      "category": "lead",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Lead Time Analysis Lead Time Groups 8-30: 18648",
+    "metadata": {
+      "category": "lead",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Lead Time Analysis Lead Time Groups 0-7: 12834",
+    "metadata": {
+      "category": "lead",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Stay Analysis Average Total Nights: 3.5",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Weekend Week Ratio: 0.37",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 1: 97.19442719015528",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 2: 99.03641343403974",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 3: 105.70333172434279",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 4: 105.3914540727903",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 5: 113.63550096711799",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 6: 120.54979389512131",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 7: 103.80638830897705",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 8: 115.19214285714284",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 9: 115.88608904933814",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 10: 108.71891342756183",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 11: 109.02028061224489",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 12: 107.68788990825688",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 13: 113.4175",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 14: 95.36256043956043",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 15: 96.21859154929578",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 16: 94.69475",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 17: 95.35499999999999",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 18: 78.92942857142856",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 19: 99.49545454545455",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 20: 76.22500000000001",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 21: 77.98267605633804",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 22: 81.26615384615386",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 23: 60.7625",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 24: 83.59",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 25: 58.60837837837837",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 26: 73.79",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 27: 79.7",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 28: 59.8235294117647",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 29: 103.48333333333333",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 30: 82.67",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 33: 91.21999999999998",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 34: 93.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 35: 39.876",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 38: 0.26",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 42: 32.167500000000004",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 45: 42.11",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 56: 27.145",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 60: 110.5",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Avg Adr 69: 110.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 1: 0.2538333821662272",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 2: 0.4443792623010926",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 3: 0.42061488192484775",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 4: 0.36620450606585786",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 5: 0.3432624113475177",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 6: 0.3991651447951996",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 7: 0.34284388772906516",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 8: 0.38414634146341464",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 9: 0.3766546329723225",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883394",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 11: 0.30612244897959184",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 12: 0.44954128440366975",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 13: 0.36428571428571427",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 14: 0.2824175824175824",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 15: 0.49295774647887325",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 16: 0.55",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 17: 0.25",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 18: 0.8285714285714286",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 19: 0.7272727272727273",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 20: 0.9285714285714286",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887325",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 22: 0.3076923076923077",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 23: 0.75",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 25: 0.6216216216216216",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 26: 1.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 27: 1.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 28: 0.35294117647058826",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 29: 0.9166666666666666",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 30: 0.9166666666666666",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 33: 1.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 34: 0.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 35: 0.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 38: 0.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 42: 0.25",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 45: 0.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 56: 0.5",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 60: 0.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Stay Analysis Stay Duration Impact Cancellation Rate 69: 0.0",
+    "metadata": {
+      "category": "stay",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Repeat Customers: 3342",
+    "metadata": {
+      "category": "customer",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Mean') Contract: 88.06819348469891",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Mean') Group: 88.70443830570903",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Mean') Transient: 108.78813889897431",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Mean') Transient-Party: 87.66708164423544",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Count') Contract: 4052",
+    "metadata": {
+      "category": "customer",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Count') Group: 543",
+    "metadata": {
+      "category": "customer",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Count') Transient: 88136",
+    "metadata": {
+      "category": "customer",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Adr', 'Count') Transient-Party: 24668",
+    "metadata": {
+      "category": "customer",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Is Canceled', 'Mean') Contract: 0.31120434353405724",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Is Canceled', 'Mean') Group: 0.07734806629834254",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Is Canceled', 'Mean') Transient: 0.4125102114913316",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Customer Analysis Customer Type Stats ('Is Canceled', 'Mean') Transient-Party: 0.2574590562672288",
+    "metadata": {
+      "category": "customer",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Aviation: 102.74320346320347",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Complementary: 34.04079365079365",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Corporate: 70.4756572634811",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Direct: 117.70200469217701",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Groups: 80.51187912256482",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Offline Ta/To: 88.5670755704417",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Online Ta: 117.9852557542477",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Avg Adr Undefined: 15.0",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Aviation: 0.22077922077922077",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Complementary: 0.07936507936507936",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Corporate: 0.1894070236039148",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Direct: 0.15395194563546638",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Groups: 0.6173237204070154",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Offline Ta/To: 0.3462842788360896",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Online Ta: 0.36939506855176596",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Segment Profitability Is Canceled Undefined: 1.0",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Total Revenue Agent: 10779128.66",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Total Revenue Company: 443412.4",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Total Revenue Self: 933200.75",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Avg Lead Time Agent: 112.21344547700271",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Avg Lead Time Company: 51.81794580561415",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Avg Lead Time Self: 61.9581526452732",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Is Canceled Agent: 0.39314002274242243",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Is Canceled Company: 0.18221645302612363",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Market Analysis Channel Performance Is Canceled Self: 0.30171292281006074",
+    "metadata": {
+      "category": "market",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Deposit Impact No Deposit: 0.28719922065270337",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Deposit Impact Non Refund: 0.9936244601357374",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Deposit Impact Refundable: 0.2222222222222222",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Avg Adr 0: 96.59076500202535",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Avg Adr 1: 110.11414608801955",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Avg Adr 2: 118.95883183065463",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Avg Adr 3: 126.94736863711",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Avg Adr 4: 137.01654320987655",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Avg Adr 5: 127.7465",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Is Canceled 0: 0.4832474972513165",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Is Canceled 1: 0.22246332518337408",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Is Canceled 2: 0.22336338690709526",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Is Canceled 3: 0.18144499178981938",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Is Canceled 4: 0.10802469135802469",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Behavior Analysis Special Requests Impact Is Canceled 5: 0.05",
+    "metadata": {
+      "category": "behavior",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Room Metrics Most Popular Room: A",
+    "metadata": {
+      "category": "room",
+      "data_type": "str"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution A: 84554",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution D: 18999",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution E: 6418",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution F: 2824",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution G: 2006",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution B: 1084",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution C: 913",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution H: 595",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Room Metrics Type Distribution L: 6",
+    "metadata": {
+      "category": "room",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2015-07: 271588.06",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2015-08: 411934.11",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2015-09: 484902.64",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2015-10: 391084.63",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2015-11: 141751.79",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2015-12: 216311.38999999998",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-01: 145597.69",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-02: 272711.66",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-03: 381427.05",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-04: 482515.44",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-05: 527973.55",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-06: 566123.95",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-07: 573637.77",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-08: 723221.42",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-09: 618933.9",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-10: 589978.46",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-11: 359075.03",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2016-12: 333338.98",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-01: 271546.42",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-02: 320858.06",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-03: 408657.0",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-04: 630470.68",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-05: 753353.54",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-06: 709962.36",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-07: 759863.01",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Monthly Revenue 2017-08: 808923.22",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "float"
+    }
+  },
+  {
+    "text": "Revenue Analysis Peak Month: 2017-08",
+    "metadata": {
+      "category": "revenue",
+      "data_type": "str"
+    }
+  },
+  {
+    "text": "Guest Demographics Top Countries Prt: 47027",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Top Countries Gbr: 12052",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Top Countries Fra: 10359",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Top Countries Esp: 8488",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Top Countries Deu: 7246",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Meal Plan Distribution Bb: 90807",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Meal Plan Distribution Hb: 14262",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Meal Plan Distribution Sc: 10417",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Meal Plan Distribution Undefined: 1131",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  },
+  {
+    "text": "Guest Demographics Meal Plan Distribution Fb: 782",
+    "metadata": {
+      "category": "guest",
+      "data_type": "int"
+    }
+  }
+]

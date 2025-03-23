@@ -1,70 +1,114 @@
-document.addEventListener('DOMContentLoaded', () => {
-    initializeDate();
-    initializeChat();
-});
+async function fetchAnalytics() {
+    try {
+        console.log('Fetching analytics data...');
+        const response = await fetch('/analytics');
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const data = await response.json();
+        
+        // Update all charts
+        const charts = [
+            ['revenue-chart', data.revenue_plot],
+            ['gauge-chart', data.gauge_plot],
+            ['country-chart', data.country_plot],
+            ['customer-seg-chart', data.customer_seg_fig],
+            ['lead-time-chart', data.lead_time_fig],
+            ['room-meal-chart', data.room_meal_fig]
+        ];
+        
+        charts.forEach(([id, b64]) => {
+            const img = document.getElementById(id);
+            if (img) img.src = `data:image/png;base64,${b64}`;
+        });
 
-function initializeDate() {
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
+        // Update cancellation rate
+        const gaugeLabel = document.querySelector('.gauge-label');
+        if (gaugeLabel) gaugeLabel.textContent = data.cancellation_rate;
+
+    } catch (error) {
+        console.error('Error fetching analytics:', error);
+    }
 }
 
+// Chat functionality
 function initializeChat() {
     const input = document.getElementById('message-input');
     const sendBtn = document.querySelector('.send-btn');
     const chatMessages = document.querySelector('.chat-messages');
 
-    const createMessageElement = (text, isUser = true) => {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
-        messageDiv.innerHTML = `<p>${text}</p>`;
-        return messageDiv;
-    };
+    // Debug: Check if elements exist
+    console.log('Chat input:', input);
+    console.log('Send button:', sendBtn);
+    console.log('Chat messages container:', chatMessages);
+    if (!input || !sendBtn || !chatMessages) {
+        console.error('Chat elements not found!');
+        return;
+        }
 
-    const handleSendMessage = () => {
+    async function sendMessage() {
         const message = input.value.trim();
         if (!message) return;
 
-        chatMessages.appendChild(createMessageElement(message));
-        setTimeout(() => {
-            chatMessages.appendChild(createMessageElement('Thank you for your message! Our team will respond shortly.', false));
+        console.log('Sending message:', message); // Debug: Log the message
+
+
+        try {
+            // Add user message
+            chatMessages.innerHTML += `
+                <div class="message user">
+                    <p>${message}</p>
+                </div>
+            `;
+
+            // Get bot response
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            
+            const data = await response.json();
+            
+            // Add bot response
+            chatMessages.innerHTML += `
+                <div class="message bot">
+                    <p>${data.response}</p>
+                </div>
+            `;
+
+            // Clear input and scroll to bottom
+            input.value = '';
             chatMessages.scrollTop = chatMessages.scrollHeight;
-        }, 1000);
-        input.value = '';
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    };
+        } catch (error) {
+            console.error('Chat error:', error);
+        }
+    }
 
-    sendBtn.addEventListener('click', handleSendMessage);
-    input.addEventListener('keypress', (e) => e.key === 'Enter' && handleSendMessage());
+    // Add event listeners
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // Debug: Verify listeners are attached
+    console.log('Event listeners added for chat');
+
 }
 
-function createRoomMealLegend() {
-    const colors = ['#ff6b6b', '#4caf4f', '#45b7d1', '#96ceb4', '#ffefad', '#691b9a', '#ff5622'];  // Match pie chart colors
-    const rooms = JSON.parse(document.getElementById('room-data').textContent);
-    const meals = JSON.parse(document.getElementById('meal-data').textContent);
-    const legend = document.getElementById('room-meal-legend');
-    
-    // Add room types
-    legend.innerHTML = '<h4>Room Types</h4>';
-    rooms.forEach((room, index) => {
-        const item = document.createElement('div');
-        item.className = 'legend-item';
-        item.innerHTML = `
-            <div class="legend-color" style="background: ${colors[index]}"></div>
-            <span>${room}</span>
-        `;
-        legend.appendChild(item);
-    });
-    
-    // Add meal types
-    legend.innerHTML += '<h4>Meal Types</h4>';
-    meals.forEach((meal, index) => {
-        const item = document.createElement('div');
-        item.className = 'legend-item';
-        item.innerHTML = `
-            <div class="legend-color" style="background: ${colors[rooms.length + index]}"></div>
-            <span>${meal}</span>
-        `;
-        legend.appendChild(item);
-    });
+function initializeDate() {
+    const dateElement = document.getElementById('current-date');
+    if (dateElement) {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = new Date().toLocaleDateString('en-US', options);
+    }
 }
 
+// Initialize components
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDate();
+    initializeChat();
+    fetchAnalytics();  // Initial load
+
+    document.getElementById('analyze-btn')?.addEventListener('click', fetchAnalytics);
+});
