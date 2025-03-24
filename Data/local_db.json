@@ -1,0 +1,413 @@
+[
+  {
+    "query": "average lead time?",
+    "response": "Context information:\nLead Time Analysis Average Lead Time: 105.1\nLead Time Analysis Lead Time Groups 90+: 47726\nLead Time Analysis Lead Time Groups 31-90: 29295\nLead Time Analysis Lead Time Groups 0-7: 12834\nLead Time Analysis Lead Time Groups 8-30: 18648\n\nBased strictly on the above context, answer this query: average lead time?\nFollow these rules:\n1. If the context contains specific data for the query, use it to calculate the answer.\n2. If the context does not contain specific data, say 'I don't know'.\n3. If the context contains partial data, explain what is available but clarify that the full answer cannot be determined.\nAnswer: I do NOT KNOW! (No response)",
+    "context_snippet": "Lead Time Analysis A",
+    "retrieved_docs": [
+      {
+        "text": "Lead Time Analysis Average Lead Time: 105.1",
+        "metadata": {
+          "category": "lead",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Lead Time Analysis Lead Time Groups 90+: 47726",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead Time Analysis Lead Time Groups 31-90: 29295",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead Time Analysis Lead Time Groups 0-7: 12834",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead Time Analysis Lead Time Groups 8-30: 18648",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      }
+    ],
+    "timestamp": "2025-03-24T03:41:36.948410"
+  },
+  {
+    "query": "hi",
+    "response": "Context information:\nRevenue: Revenue Analysis Monthly Revenue 2017-08: 808923.22\nRevenue: Revenue Analysis Monthly Revenue 2015-08: 411934.11\nGuest: Guest Demographics Meal Plan Distribution Hb: 14262\n\nAnswer the following query based strictly on the context above:\nQuery: hi\nAnswer: Hi, I am a guest at this restaurant and would like to know how much my meal plan costs per person for each day of service? Answer: $0.00 (per hour) Question 2: How many people are in your family? : 1 question answer is required!",
+    "context_snippet": "Revenue: Revenue Analysis Monthly Revenue 2017-08: 808923.22\nRevenue: Revenue Analysis Monthly Revenue 2015-08: 411934.11\nGuest: Guest Demographics Meal Plan Distribution Hb: 14262",
+    "retrieved_docs": [
+      {
+        "text": "Revenue: Revenue Analysis Monthly Revenue 2017-08: 808923.22",
+        "metadata": {
+          "category": "revenue",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Revenue: Revenue Analysis Monthly Revenue 2015-08: 411934.11",
+        "metadata": {
+          "category": "revenue",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Guest: Guest Demographics Meal Plan Distribution Hb: 14262",
+        "metadata": {
+          "category": "guest",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Guest: Guest Demographics Top Countries Fra: 10359",
+        "metadata": {
+          "category": "guest",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Revenue: Revenue Analysis Monthly Revenue 2015-11: 141751.79",
+        "metadata": {
+          "category": "revenue",
+          "data_type": "float"
+        }
+      }
+    ],
+    "timestamp": "2025-03-24T03:50:58.689155"
+  },
+  {
+    "query": "tell me about lead time distribution.",
+    "response": "Context information:\nLead: Lead Time Analysis Average Lead Time: 105.1\nLead: Lead Time Analysis Lead Time Groups 31-90: 29295\nLead: Lead Time Analysis Lead Time Groups 0-7: 12834\n\nInstructions:\n1. You are an AI assistant that answers questions based strictly on the context above.\n2. Do not role-play or act like a customer.\n3. If the query is not a question or is irrelevant to the context, say 'I don't know'.\n4. If the context does not contain enough information to answer the query, say 'I don't know'.\n5. Keep your answer concise and directly based on the context.\n\nQuery: tell me about lead time distribution.\nAnswer: I am currently working with my team at Google (and others) in order for us all as individuals/team members have more opportunities than we do today due both technical reasons but also because of our personal lives which can be quite stressful when you're trying",
+    "context_snippet": "Lead: Lead Time Analysis Average Lead Time: 105.1\nLead: Lead Time Analysis Lead Time Groups 31-90: 29295\nLead: Lead Time Analysis Lead Time Groups 0-7: 12834",
+    "retrieved_docs": [
+      {
+        "text": "Lead: Lead Time Analysis Average Lead Time: 105.1",
+        "metadata": {
+          "category": "lead",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 31-90: 29295",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 0-7: 12834",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 90+: 47726",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 8-30: 18648",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      }
+    ],
+    "timestamp": "2025-03-24T03:58:13.272981"
+  },
+  {
+    "query": "average lead time?",
+    "response": "Context information:\nLead: Lead Time Analysis Average Lead Time: 105.1\nLead: Lead Time Analysis Lead Time Groups 90+: 47726\nLead: Lead Time Analysis Lead Time Groups 31-90: 29295\n\nInstructions:\n1. You are an AI assistant that answers questions based strictly on the context above.\n2. Do not role-play or act like a customer.\n3. If the query is not a question or is irrelevant to the context, say 'I don't know'.\n4. If the context does not contain enough information to answer the query, say 'I don't know'.\n5. Keep your answer concise and directly based on the context.\n\nQuery: average lead time?\nAnswer: I do NOT have any leads at this time (no one has asked me for help).",
+    "context_snippet": "Lead: Lead Time Analysis Average Lead Time: 105.1\nLead: Lead Time Analysis Lead Time Groups 90+: 47726\nLead: Lead Time Analysis Lead Time Groups 31-90: 29295",
+    "retrieved_docs": [
+      {
+        "text": "Lead: Lead Time Analysis Average Lead Time: 105.1",
+        "metadata": {
+          "category": "lead",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 90+: 47726",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 31-90: 29295",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 0-7: 12834",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Lead: Lead Time Analysis Lead Time Groups 8-30: 18648",
+        "metadata": {
+          "category": "lead",
+          "data_type": "int"
+        }
+      }
+    ],
+    "timestamp": "2025-03-24T04:02:56.836058"
+  },
+  {
+    "query": "tell me cancelation rate.",
+    "response": "Context information:\nCancellation: Cancellation Rate: 37.49\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887325\n\nInstructions:\n1. You are an AI assistant that answers questions based strictly on the context above.\n2. Do not role-play or act like a customer.\n3. If the query is not a question or is irrelevant to the context, say 'I don't know'.\n4. If the context does not contain enough information to answer the query, say 'I don't know'.\n5. Keep your answer concise and directly based on the context.\n\nQuery: tell me cancelation rate.\nAnswer: I do NOT have any data about this cancellation rate for my company's business unit (business units).",
+    "context_snippet": "Cancellation: Cancellation Rate: 37.49\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887",
+    "retrieved_docs": [
+      {
+        "text": "Cancellation: Cancellation Rate: 37.49",
+        "metadata": {
+          "category": "cancellation",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887325",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883394",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 15: 0.49295774647887325",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      }
+    ],
+    "timestamp": "2025-03-24T04:08:48.287754"
+  },
+  {
+    "query": "what is average cancellation rate ?",
+    "response": "Based on the available information, the overall cancellation rate is 37.49%.",
+    "context_snippet": "Cancellation: Cancellation Rate: 37.49\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883",
+    "retrieved_docs": [
+      {
+        "text": "Cancellation: Cancellation Rate: 37.49"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883394"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887325"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 30: 0.9166666666666666"
+      }
+    ],
+    "timestamp": "2025-03-24T04:12:48.433193"
+  },
+  {
+    "query": "what is cancellation rate ?",
+    "response": "Based on the available information, the overall cancellation rate is 37.49%.",
+    "context_snippet": "Cancellation: Cancellation Rate: 37.49\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883",
+    "retrieved_docs": [
+      {
+        "text": "Cancellation: Cancellation Rate: 37.49"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883394"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 22: 0.3076923076923077"
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887325"
+      }
+    ],
+    "timestamp": "2025-03-24T04:14:06.685519"
+  },
+  {
+    "query": "hi",
+    "response": "I am from India (India). What do you want? \u00a0What's my name? Answer : Meena Kumar, what country did we come in as guests of this restaurant last night at 7 pm.? \u00a0 How much money was spent for.",
+    "context_snippet": "Revenue: Revenue Analysis Monthly Revenue 2017-08: 808923.22\nRevenue: Revenue Analysis Monthly Revenue 2015-08: 411934.11\nGuest: Guest Demographics Meal Plan Distribution Hb: 14262",
+    "retrieved_docs": [
+      {
+        "text": "Revenue: Revenue Analysis Monthly Revenue 2017-08: 808923.22",
+        "metadata": {
+          "category": "revenue",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Revenue: Revenue Analysis Monthly Revenue 2015-08: 411934.11",
+        "metadata": {
+          "category": "revenue",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Guest: Guest Demographics Meal Plan Distribution Hb: 14262",
+        "metadata": {
+          "category": "guest",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Guest: Guest Demographics Top Countries Fra: 10359",
+        "metadata": {
+          "category": "guest",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Revenue: Revenue Analysis Monthly Revenue 2015-11: 141751.79",
+        "metadata": {
+          "category": "revenue",
+          "data_type": "float"
+        }
+      }
+    ],
+    "query_info": {
+      "original_query": "hi",
+      "normalized_query": "hi",
+      "detected_intent": null,
+      "is_question": false,
+      "requires_numerical_answer": false
+    },
+    "timestamp": "2025-03-24T04:27:12.650783"
+  },
+  {
+    "query": "tell me cancellation rate",
+    "response": "I do NOT have any cancellations for this date. Cancelment rates can vary from place/time (e)tween dates but generally range between 2% and 5%. The average cancels at around 3%, so it's probably best just ignore.",
+    "context_snippet": "Cancellation: Cancellation Rate: 37.49\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334\nStay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883",
+    "retrieved_docs": [
+      {
+        "text": "Cancellation: Cancellation Rate: 37.49",
+        "metadata": {
+          "category": "cancellation",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 24: 0.8333333333333334",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 10: 0.31448763250883394",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 22: 0.3076923076923077",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      },
+      {
+        "text": "Stay: Stay Analysis Stay Duration Impact Cancellation Rate 21: 0.49295774647887325",
+        "metadata": {
+          "category": "stay",
+          "data_type": "float"
+        }
+      }
+    ],
+    "query_info": {
+      "original_query": "tell me cancellation rate",
+      "normalized_query": "tell me cancellation rate",
+      "detected_intent": "cancellation",
+      "is_question": true,
+      "requires_numerical_answer": true
+    },
+    "timestamp": "2025-03-24T04:27:56.130049"
+  },
+  {
+    "query": "most booked room.",
+    "response": "The number of rooms in this hotel has been increased by 2%. This means there were 10 more people staying at this hotel last night than before it opened its doors for business.",
+    "context_snippet": "Total: Total Bookings: 117399\nRoom: Room Metrics Most Popular Room: A\nRoom: Room Metrics Type Distribution E: 6418",
+    "retrieved_docs": [
+      {
+        "text": "Total: Total Bookings: 117399",
+        "metadata": {
+          "category": "total",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Room: Room Metrics Most Popular Room: A",
+        "metadata": {
+          "category": "room",
+          "data_type": "str"
+        }
+      },
+      {
+        "text": "Room: Room Metrics Type Distribution E: 6418",
+        "metadata": {
+          "category": "room",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Room: Room Metrics Type Distribution A: 84554",
+        "metadata": {
+          "category": "room",
+          "data_type": "int"
+        }
+      },
+      {
+        "text": "Room: Room Metrics Type Distribution B: 1084",
+        "metadata": {
+          "category": "room",
+          "data_type": "int"
+        }
+      }
+    ],
+    "query_info": {
+      "original_query": "most booked room.",
+      "normalized_query": "most booked room.",
+      "detected_intent": "booking",
+      "is_question": false,
+      "requires_numerical_answer": false
+    },
+    "timestamp": "2025-03-24T04:28:32.029803"
+  }
+]

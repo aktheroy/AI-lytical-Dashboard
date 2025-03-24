@@ -9,7 +9,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f0f2f5;
   color: #333;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Container Layout */
@@ -17,8 +17,9 @@ body {
   display: flex;
   gap: 20px;
   padding: 20px;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 100vw;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Dashboard Styles */
@@ -40,7 +41,7 @@ body {
 }
 
 .header-left h1 {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem); /* Responsive font size */
   color: #2c3e50;
 }
 
@@ -52,7 +53,7 @@ body {
 
 .social-links a {
   color: #3498db;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
@@ -75,12 +76,24 @@ body {
 .row {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  align-items: stretch; /* Ensure cards stretch to the same height */
+
+}
+.col-70, .col-30, .col-33, .col-66 {
+  width: 68%; /* Default to full width on smaller screens */
 }
 
-.col-70 { width: 70%; }
-.col-30 { width: 30%; }
-.col-33 { width: calc(33.33% - 13.33px); }
-.col-66 { width: 66.66%;}
+.col-30, .col-33, .col-66 {
+  width: 100%; /* Default to full width on smaller screens */
+}
+
+@media (min-width: 768px) {
+  .col-70 { width: 68%; }
+  .col-30 { width: 30%; }
+  .col-33 { width: calc(33.33% - 20.33px); }
+  .col-66 { width: 66.66%; }
+}
 
 /* Card Styling */
 .card {
@@ -96,7 +109,8 @@ body {
 }
 
 .small-card {
-  height: 270px;
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 275px; /* Minimum height */
   display: flex;
   flex-direction: column;
 }
@@ -104,39 +118,34 @@ body {
 .card h3 {
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 /* Chart Containers */
 #revenue-chart,
 #customer-seg-chart,
-#country-chart {
-  height: 200px;
-  object-fit: contain;
-}
-
-#gauge-chart {
-  height: 300px;
-  object-fit: contain;
-}
-#lead-time-chart {
-  height: 200px;
-  object-fit: contain;
-}
+#country-chart,
+#gauge-chart,
+#lead-time-chart,
 #room-meal-chart {
-  height: 200px;
+  height: 210px;
   object-fit: contain;
 }
-
 
 /* Chatbot Styles */
 .chat-bot {
-  width: 350px;
+  width: 100%; /* Full width on smaller screens */
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .chat-bot {
+    width: 350px; /* Fixed width on larger screens */
+  }
 }
 
 .chat-header {
@@ -220,8 +229,7 @@ body {
 .card-color-5 { background: #ffefad; color: #2c3e50; }
 .card-color-6 { background: #9b59b6; color: white; }
 .card-color-7 { background: #07c4a7; color: white; }
-.card-color-8 { background: #c2c3d2; color: white; }
-
+.card-color-8 { background: #c2c3d2; color: white; width: 350px; }
 
 /* System Health Button Styles */
 .health-button-container {
@@ -313,11 +321,13 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .container {
       flex-direction: column;
       height: auto;
+      width: 80%;
   }
+
   
   .chat-bot {
       width: 100%;
@@ -329,6 +339,73 @@ body {
   }
   
   .col-70, .col-30, .col-33 {
-      width: 100%;
+      width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    width: 70%;
+
+}
+  .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .social-links {
+      margin-top: 15px;
+  }
+
+  .card {
+      padding: 15px;
+  }
+
+  .small-card {
+      min-height: 200px;
+  }
+
+  .health-button {
+      width: 100px;
+      height: 100px;
+  }
+
+  .health-percent {
+      font-size: 2rem;
+  }
+
+  .health-status {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 10px;
+      width: 80%;
+
+  }
+
+  .dashboard-header h1 {
+      font-size: 1.5rem;
+  }
+
+  .social-links a {
+      font-size: 1rem;
+  }
+
+  .card h3 {
+      font-size: 1rem;
+  }
+
+  .chat-input input {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  .send-btn {
+      padding: 6px 8px;
+      font-size: 20px;
   }
 }

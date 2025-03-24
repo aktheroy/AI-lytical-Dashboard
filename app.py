@@ -43,12 +43,10 @@ def ask():
     user_message = data.get('message', '')
 
     # Process the message using RAGLLM
-    response = rag_llm.process_message(user_message)
+    result = rag_llm.process_message(user_message)
+    answer = result["response"]
 
-    return jsonify({
-        "response": f"Bot: {response['reversed_message']} (Length: {response['message_length']})",
-        "status": "success"
-    })
+    return jsonify({"response": answer})
 
 if __name__ == '__main__':
     app.run(debug=True)

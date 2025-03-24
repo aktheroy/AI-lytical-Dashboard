@@ -32,7 +32,7 @@ class DataAnalyzer:
 
     def generate_revenue_trend(self):
         df_grouped = self.df.groupby('arrival_date', as_index=False)['revenue'].sum()
-        fig, ax = plt.subplots(figsize=(26, 5))
+        fig, ax = plt.subplots(figsize=(26, 8))
         self._configure_plot(fig, ax)
         
         sns.lineplot(data=df_grouped, x='arrival_date', y='revenue', 
@@ -42,19 +42,19 @@ class DataAnalyzer:
 
     def generate_cancellation_rate(self):
         cancellation_rate = (self.df['is_canceled'].sum() / len(self.df)) * 100
-        fig = plt.figure(figsize=(6, 6), facecolor='none')
+        fig = plt.figure(figsize=(8, 4), facecolor='none')
         ax = fig.add_subplot(111, aspect='equal')
         
         # Gauge elements
         ax.add_patch(Arc((0.5, 0.5), 0.6, 0.6, theta1=0, theta2=180, color='lightgray', lw=20))
-        ax.add_patch(Wedge((0.5, 0.5), 0.3, 0.6, 180*cancellation_rate/100, width=0.05, color=self.style['colors'][0]))
+        ax.add_patch(Wedge((0.5, 0.5), 0.3, 0.6, 180*cancellation_rate/100, width=0.09, color=self.style['colors'][0]))
         plt.text(0.5, 0.5, f'{cancellation_rate:.1f}%', ha='center', va='center', fontsize=24, color='white')
         ax.axis('off')
         return fig, cancellation_rate
 
     def generate_geo_distribution(self):
         country_counts = self.df['country'].value_counts().nlargest(5)
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(12, 8))
         self._configure_plot(fig, ax)
         
         # Create vertical bar chart
@@ -100,10 +100,11 @@ class DataAnalyzer:
             segment_counts,
             labels=segment_counts.index,
             colors=self.style['colors'][:len(segment_counts)],  # Use colors from palette
-            autopct='%1.1f%%',  # Show percentages
-            startangle=30,  # Start from top
-            wedgeprops=dict(width=0.4),  # Create donut hole
-            textprops={'color': self.style['font_color'], 'fontsize': 22}
+            autopct='%1.2f%%',  # Show percentages
+            startangle=60,  # Start from top
+            wedgeprops=dict(width=1),
+            explode= [0,0.2,0.2,0.4],  # Create donut hole
+            textprops={'color': self.style['font_color'], 'fontsize': 30}
         )        
         # Make percentage text white and bold
         for autotext in autotexts:
@@ -111,19 +112,20 @@ class DataAnalyzer:
             autotext.set_fontweight('bold')
         
         # Add center circle for donut effect
-        centre_circle = plt.Circle((0, 0), 0.3, fc='none')
+        centre_circle = plt.Circle((0, 0), 0.4, fc='none')
         ax.add_artist(centre_circle)
         
         # Remove unnecessary spines
         ax.axis('equal')  # Ensure pie is circular
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
+        ax.legend = 'labels'
         
         return fig, segment_counts.index.tolist()
 
     def generate_lead_time_distribution(self):
         # Create figure and axis
-        fig, ax = plt.subplots(figsize=(22, 4))
+        fig, ax = plt.subplots(figsize=(24, 8))
         self._configure_plot(fig, ax)  # Apply consistent styling
         
         # Create KDE plot
@@ -148,8 +150,8 @@ class DataAnalyzer:
 
     def generate_room_meal_distribution(self):
         # Get data for room types and meals
-        room_counts = self.df['reserved_room_type'].value_counts().nlargest(5)
-        meal_counts = self.df['meal'].value_counts().nlargest(5)
+        room_counts = self.df['reserved_room_type'].value_counts().nlargest(3)
+        meal_counts = self.df['meal'].value_counts().nlargest(3)
         
         # Create figure and axis
         fig, ax = plt.subplots(figsize=(8, 8))
@@ -176,10 +178,10 @@ class DataAnalyzer:
             labels=meal_counts.index,
             colors=colors[len(room_counts):len(room_counts) + len(meal_counts)],  # Use next set of colors for meals
             radius=0.8,  # Inner radius
-            startangle=30,  # Start from top
+            startangle=90,  # Start from top
             wedgeprops=dict(width=0.4),  # Create donut hole
             autopct='%1.1f%%',  # Show percentages
-            textprops={'color': self.style['font_color'], 'fontsize': 10}
+            textprops={'color': self.style['font_color'], 'fontsize': 20}
         )        
         # Make percentage text white and bold
         for autotext in autotexts_outer + autotexts_inner:
