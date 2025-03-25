@@ -1,8 +1,8 @@
 from flask import Flask, render_template,request,jsonify
 import base64
 from io import BytesIO
-from analytics import DataAnalyzer
-from RagLLMs import RAGLLM  # Import the RAGLLM class
+from Backend.ML.analytics import DataAnalyzer
+from Backend.ML.RagLLMs import RAGLLM  # Import the RAGLLM class
 
 
 app = Flask(__name__, template_folder='Frontend/Templates', static_folder='Frontend/Static')
