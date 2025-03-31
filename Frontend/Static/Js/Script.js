@@ -1,3 +1,4 @@
+// script.js
 async function fetchAnalytics() {
     try {
         console.log('Fetching analytics data...');
@@ -29,71 +30,102 @@ async function fetchAnalytics() {
     }
 }
 
-// Chat functionality
+function sanitizeInput(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+async function sendMessage() {
+    const input = document.getElementById('message-input');
+    const sendBtn = document.querySelector('.send-btn');
+    const chatMessages = document.querySelector('.chat-messages');
+    const message = input.value.trim();
+
+    if (!message) return;
+
+    try {
+        // Add user message
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'message user';
+        userMessageDiv.innerHTML = `<p>${sanitizeInput(message)}</p>`;
+        chatMessages.appendChild(userMessageDiv);
+        userMessageDiv.classList.add('visible');
+
+        // Clear input
+        input.value = '';
+        
+        // Add loading indicator
+        const loadingMessageDiv = document.createElement('div');
+        loadingMessageDiv.className = 'message bot loading';
+        loadingMessageDiv.innerHTML = '<p class="loading-dots">Thinking</p>';
+        chatMessages.appendChild(loadingMessageDiv);
+        loadingMessageDiv.classList.add('visible');
+
+        // Get bot response
+        const response = await fetch('/ask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: message })
+        });
+        
+        if (!response.ok) throw new Error('Bot response failed');
+        const data = await response.json();
+
+        // Remove loading message
+        chatMessages.removeChild(loadingMessageDiv);
+
+        // Add bot response
+        const botMessageDiv = document.createElement('div');
+        botMessageDiv.className = 'message bot';
+        botMessageDiv.innerHTML = `<p>${sanitizeInput(data.response)}</p>`;
+        chatMessages.appendChild(botMessageDiv);
+        botMessageDiv.classList.add('visible');
+
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    } catch (error) {
+        console.error('Chat error:', error);
+        // Remove loading message if present
+        const loadingMessages = document.querySelectorAll('.loading');
+        loadingMessages.forEach(msg => msg.remove());
+
+        // Add error message
+        const errorMessageDiv = document.createElement('div');
+        errorMessageDiv.className = 'message bot error';
+        errorMessageDiv.innerHTML = '<p>Sorry, I\'m having trouble responding. Please try again.</p>';
+        chatMessages.appendChild(errorMessageDiv);
+        errorMessageDiv.classList.add('visible');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+
 function initializeChat() {
     const input = document.getElementById('message-input');
     const sendBtn = document.querySelector('.send-btn');
     const chatMessages = document.querySelector('.chat-messages');
 
-    // Debug: Check if elements exist
-    console.log('Chat input:', input);
-    console.log('Send button:', sendBtn);
-    console.log('Chat messages container:', chatMessages);
     if (!input || !sendBtn || !chatMessages) {
         console.error('Chat elements not found!');
         return;
-        }
-
-    async function sendMessage() {
-        const message = input.value.trim();
-        if (!message) return;
-
-        console.log('Sending message:', message); // Debug: Log the message
-
-
-        try {
-            // Add user message
-            chatMessages.innerHTML += `
-                <div class="message user">
-                    <p>${message}</p>
-                </div>
-            `;
-
-            // Get bot response
-            const response = await fetch('/ask', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: message })
-            });
-            
-            const data = await response.json();
-            
-            // Add bot response
-            chatMessages.innerHTML += `
-                <div class="message bot">
-                    <p>${data.response}</p>
-                </div>
-            `;
-
-            // Clear input and scroll to bottom
-            input.value = '';
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        } catch (error) {
-            console.error('Chat error:', error);
-        }
     }
 
-    // Add event listeners
-    sendBtn.addEventListener('click', sendMessage);
-    input.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
+    // Event listeners
+    sendBtn.addEventListener('click', async () => {
+        sendBtn.disabled = true;
+        await sendMessage();
+        sendBtn.disabled = false;
     });
 
-    // Debug: Verify listeners are attached
-    console.log('Event listeners added for chat');
-
+    input.addEventListener('keypress', async (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendBtn.disabled = true;
+            await sendMessage();
+            sendBtn.disabled = false;
+        }
+    });
 }
 
 function initializeDate() {
@@ -108,7 +140,7 @@ function initializeDate() {
 document.addEventListener('DOMContentLoaded', () => {
     initializeDate();
     initializeChat();
-    fetchAnalytics();  // Initial load
+    fetchAnalytics();
 
     document.getElementById('analyze-btn')?.addEventListener('click', fetchAnalytics);
 });
